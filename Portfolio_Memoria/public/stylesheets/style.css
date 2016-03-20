@@ -8,15 +8,53 @@ a {
 .all {
   display: block;
   position: absolute;
+  width: 100%;
 }
 .pagetop {
-  width: 100%;
+  position: fixed;
   height: 70%;
   background: url("/images/coffee.png") no-repeat center center fixed;
   background-size: cover;
+  min-width: 1000px;
 }
 .pagescroll {
   text-align: center;
-  width: 100%;
   top: 70%;
+  height: 3000px;
+  min-width: 1000px;
+  background-color: #e6e6e6;
+}
+.namediv {
+  background-color: #e6e6e6;
+  z-index: 2;
+}
+.fixedname {
+  position: fixed;
+  top: 0;
+}
+.leftscroll {
+  position: relative;
+  display: inline-block;
+  width: 40%;
+  font: 60px 'PT Sans Narrow';
+  color: #323232;
+  text-align: right;
+  vertical-align: middle;
+}
+.midscroll {
+  position: relative;
+  display: inline-block;
+  width: 20%;
+  background-color: #c8c8c8;
+}
+.rightscroll {
+  position: relative;
+  display: inline-block;
+  width: 40%;
+  font: 20px 'PT Sans Narrow';
+  text-align: left;
+  vertical-align: middle;
+}
+.scroll1 {
+  margin-top: 300px;
 }
