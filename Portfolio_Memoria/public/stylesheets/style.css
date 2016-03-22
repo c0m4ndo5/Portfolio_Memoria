@@ -55,6 +55,14 @@ a {
   text-align: left;
   vertical-align: middle;
 }
-.scroll1 {
+.scrollarea {
   margin-top: 300px;
+}
+.scrollarea > div {
+  position: initial;
+  display: inline-block;
+  margin-top: 50px;
+}
+.scrolltext {
+  padding: 10px;
 }
