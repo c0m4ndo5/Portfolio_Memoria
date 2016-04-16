@@ -1,13 +1,17 @@
 ﻿extends layout
 
 block content
-    link(rel='stylesheet', href='/stylesheets/slideme.css')
+    //link(rel='stylesheet', href='/stylesheets/slideme.css')
     script(type="text/javascript", src="//code.jquery.com/jquery-2.2.0.min.js")
-    script(type="text/javascript", src="/javascripts/jquery.slideme2.js")
+    //script(type="text/javascript", src="/javascripts/jquery.slideme2.js")
     script(type="text/javascript", src="/javascripts/main.js")
     div(class="blackoverlay")
+        div(class="arrowright arrows clickable")
+            img(src="/images/arrowright.png")
+        div(class="arrowleft arrows clickable")
+            img(src="/images/arrowleft.png")
         div(id="aboutme_slide" class="slides")
-          ul(class="slideslist")
+          ul
             li
                 img(src="/images/hey.jpg")
             li
@@ -33,7 +37,7 @@ block content
                     div(class="scrolltext")
                         |ABOUT ME
                 div(class="midscroll all")
-                    button(id="aboutme_click" type="button")
+                    div(id="aboutme_click" class="clickable")
                         img(src="/images/thumbnail_me.png")
                 div(class="rightscroll all")
                     div(style="scrolltext")

@@ -36,7 +36,17 @@
     <Compile Include="routes\users.js" />
     <Compile Include="bin\www" />
     <Content Include="package.json" />
+    <Content Include="public\images\arrowleft.png" />
+    <Content Include="public\images\arrowright.png" />
+    <Content Include="public\images\banner0_portfolio_yuri.jpg" />
+    <Content Include="public\images\banner1_portfolio_yuri.jpg" />
+    <Content Include="public\images\banner2_portfolio_yuri.jpg" />
     <Content Include="public\images\coffee.png" />
+    <Content Include="public\images\dog.jpg" />
+    <Content Include="public\images\hey.jpg" />
+    <Content Include="public\images\offroad.jpg" />
+    <Content Include="public\images\thumbnail_me.png" />
+    <Content Include="public\images\treehand.jpg" />
     <Content Include="public\stylesheets\style.styl" />
     <Content Include="README.md" />
     <Content Include="views\index.jade" />

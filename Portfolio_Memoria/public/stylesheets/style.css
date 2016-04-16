@@ -80,8 +80,66 @@ a {
   z-index: 10;
 }
 .slides {
-  text-align: center;
-  vertical-align: center;
+  display: none;
   width: 70%;
   height: 70%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.clickable {
+  cursor: pointer;
+}
+.slides ul {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.slides li:first-of-type {
+  display: block;
+}
+.slides li {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+}
+.slides img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+.arrows {
+  position: fixed;
+  height: 100%;
+  width: 5%;
+  transition: 0.5s ease-in-out;
+  opacity: 0.6;
+}
+.arrows:hover {
+  opacity: 1;
+}
+.arrowleft {
+  left: 0;
+  top: 0;
+}
+.arrowright {
+  position: fixed;
+  left: 95%;
+  top: 0;
+}
+.arrows img {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 100%;
+  max-height: 100%;
 }
