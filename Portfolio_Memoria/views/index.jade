@@ -1,8 +1,21 @@
 ﻿extends layout
 
 block content
+    link(rel='stylesheet', href='/stylesheets/slideme.css')
     script(type="text/javascript", src="//code.jquery.com/jquery-2.2.0.min.js")
+    script(type="text/javascript", src="/javascripts/jquery.slideme2.js")
     script(type="text/javascript", src="/javascripts/main.js")
+    div(class="blackoverlay")
+        div(id="aboutme_slide" class="slides")
+          ul(class="slideslist")
+            li
+                img(src="/images/hey.jpg")
+            li
+                img(src="/images/dog.jpg")
+            li
+                img(src="/images/offroad.jpg")
+            li
+                img(src="/images/treehand.jpg")
     div(class="pagetop all")
 
     div(class="pagescroll all")
@@ -20,7 +33,8 @@ block content
                     div(class="scrolltext")
                         |ABOUT ME
                 div(class="midscroll all")
-                    |test
+                    button(id="aboutme_click" type="button")
+                        img(src="/images/thumbnail_me.png")
                 div(class="rightscroll all")
                     div(style="scrolltext")
                         |I am a Brazillian computer engineer who has been involved in the programming world for the past 9 years.
@@ -45,3 +59,26 @@ block content
                         br
                         br
                         |Five years of diverse yet disciplined studies have taught me the most important lesson of all - a good developer knows how to implement solutions to problems, rather than simply create code.
+            div(class="all")
+                div(class="leftscroll all")
+                    div(class="scrolltext")
+                        |WORK
+                div(class="midscroll all")
+                    |test
+                div(class="rightscroll all")
+                    div(style="scrolltext")
+                        |I have joined ExxonMobil in 2012 as a full time employee and have been working with them since. I started as a tools developer within Customer Services department, with my time split between frontline customer handling and C# tools development to enhance department processes and increase efficiency
+                        br
+                        br
+                        |Soon after I was assigned as a full time tools developer and I had the chance to work with initiatives that automated several manual processes in the company, such as new user creation, automatic analyst metrics (with SQL database & tableau) and some web (HTML and ASP .NET) development.
+                        br
+                        br
+                        |Currently, I am developing software automations using BMC Atrium Orchestrator interacting with several technologies such as Unix/Centrify, PowerShell, ITSM Remedy/SRM and more. I am getting familiar with XML/XSLT, SOAP, REST and web services in general.
+            div(class="all")
+                div(class="leftscroll all")
+                    div(class="scrolltext")
+                        |INTERESTING?
+                div(class="midscroll all")
+                div(class="rightscroll all")
+                    div(style="scrolltext")
+                        |Scroll down!
