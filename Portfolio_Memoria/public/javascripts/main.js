@@ -25,8 +25,13 @@ $(document).ready(function () {
 
     $("#aboutme_click").on("click", function () {
         $(".blackoverlay").fadeIn(1000);
-        $("#aboutme_slide").fadeIn(1000);
+        //$("#aboutme_slide").fadeIn(1000);
         active_slideshow = "#aboutme_slide";
+    });
+    
+    $(".back").on("click", function () {
+        $(".blackoverlay").fadeOut(1000);
+        //$("#aboutme_slide").fadeOut(1000);
     });
 
     $(".arrowright").on("click", function () {

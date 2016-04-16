@@ -80,7 +80,7 @@ a {
   z-index: 10;
 }
 .slides {
-  display: none;
+  display: block;
   width: 70%;
   height: 70%;
   position: relative;
@@ -142,4 +142,18 @@ a {
   transform: translateY(-50%);
   max-width: 100%;
   max-height: 100%;
+}
+.back {
+  position: fixed;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  font: 30px 'PT Sans Narrow';
+  background-color: rgba(255,255,255,0.4);
+  color: #1e1e1e;
+  padding: 5px;
+}
+.back img {
+  vertical-align: sub;
+  margin-right: 3px;
 }
