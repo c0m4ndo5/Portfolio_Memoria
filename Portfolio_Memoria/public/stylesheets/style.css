@@ -80,7 +80,7 @@ a {
   z-index: 10;
 }
 .slides {
-  display: block;
+  display: none;
   width: 70%;
   height: 70%;
   position: relative;
@@ -156,4 +156,40 @@ a {
 .back img {
   vertical-align: sub;
   margin-right: 3px;
+}
+.zoomhover {
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.zoomhover:hover,
+.zoomhover:focus,
+.zoomhover:active {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}
+.social {
+  position: absolute;
+  width: 105vw;
+  left: -100vw;
+  height: 50vh;
+  top: 50vh;
+  transform: translateY(-50%);
+}
+.fixedsocial {
+  position: fixed;
+  top: 50%;
+}
+.social img {
+  max-width: 100%;
+}
+.social div {
+  border-radius: 6px;
+  background: rgba(200,200,200,0.7);
+  background-position: left top;
+  background-repeat: repeat;
+}
+.social div:hover {
+  background: rgba(200,200,200,0.9);
 }

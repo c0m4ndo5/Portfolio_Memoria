@@ -4,7 +4,7 @@ var active_slideshow = "none"
 
 $(document).ready(function () {
     $(window).on("resize", function (e) {
-        var lockpos = $(window).height()*0.7;
+        lockpos = $(window).height()*0.7;
         lockName();
     });
 
@@ -25,13 +25,19 @@ $(document).ready(function () {
 
     $("#aboutme_click").on("click", function () {
         $(".blackoverlay").fadeIn(1000);
-        //$("#aboutme_slide").fadeIn(1000);
+        $("#aboutme_slide").fadeIn(1000);
         active_slideshow = "#aboutme_slide";
     });
     
+    $("#education_click").on("click", function () {
+        $(".blackoverlay").fadeIn(1000);
+        $("#education_slide").fadeIn(1000);
+        active_slideshow = "#education_slide";
+    });
+
     $(".back").on("click", function () {
         $(".blackoverlay").fadeOut(1000);
-        //$("#aboutme_slide").fadeOut(1000);
+        $(".slides").fadeOut(1000);
     });
 
     $(".arrowright").on("click", function () {
@@ -69,7 +75,9 @@ $(document).ready(function () {
 function lockName(){
     if ($(window).scrollTop() > lockpos) {
         $(".namediv").addClass("fixedname");
+        $(".social").addClass("fixedsocial");
     } else {
         $(".namediv").removeClass("fixedname");
+        $(".social").removeClass("fixedsocial");
     }
 }

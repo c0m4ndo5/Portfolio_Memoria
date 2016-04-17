@@ -20,6 +20,14 @@ block content
                 img(src="/images/offroad.jpg")
             li
                 img(src="/images/treehand.jpg")
+        div(id="education_slide" class="slides")
+          ul
+            li
+                img(src="/images/campus_UTFPR.jpg")
+            li
+                img(src="/images/panorama_utfpr.jpg")
+            li
+                img(src="/images/grey_utfpr.jpg")
         div(class="back clickable")
             img(src="/images/close.png")
             |RETURN
@@ -34,13 +42,16 @@ block content
                 |Software Engineer & Programmer
                 br
                 |Creative problem solver and innovator
+        div(class="social all")
+            div(id="facebook" class="clickable")
+                img(src="/images/social1.png")
         div(class="scrollarea all")
             div(class="all")
                 div(class="leftscroll all")
                     div(class="scrolltext")
                         |ABOUT ME
                 div(class="midscroll all")
-                    div(id="aboutme_click" class="clickable")
+                    div(id="aboutme_click" class="clickable zoomhover")
                         img(src="/images/thumbnail_me.png")
                 div(class="rightscroll all")
                     div(style="scrolltext")
@@ -56,7 +67,8 @@ block content
                     div(class="scrolltext")
                         |EDUCATION
                 div(class="midscroll all")
-                    |test
+                    div(id="education_click" class="clickable zoomhover")
+                        img(src="/images/thumbnail_utfpr.png")
                 div(class="rightscroll all")
                     div(style="scrolltext")
                         |I have been into the computing world since I was very young. I started by modifying games and creating scripted missions with a passion and curiousity that eventually drove me to seek the computing career.
