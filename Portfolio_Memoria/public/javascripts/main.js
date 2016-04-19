@@ -5,11 +5,11 @@ var active_slideshow = "none"
 $(document).ready(function () {
     $(window).on("resize", function (e) {
         lockpos = $(window).height()*0.7;
-        lockName();
+        update_scroll();
     });
 
     $(window).on("scroll", function (e) {
-        lockName();
+        update_scroll();
     });
     var bannerindex = 0;
     setInterval(function () {
@@ -72,12 +72,29 @@ $(document).ready(function () {
     });
 });
 
-function lockName(){
-    if ($(window).scrollTop() > lockpos) {
+function update_scroll(){
+    var currentScrollPos = $(window).scrollTop();
+    if (currentScrollPos > lockpos) {
         $(".namediv").addClass("fixedname");
         $(".social").addClass("fixedsocial");
     } else {
         $(".namediv").removeClass("fixedname");
         $(".social").removeClass("fixedsocial");
+    }
+    
+    var bottompos = $("#bottom").offset().top;
+    if (currentScrollPos > bottompos) {
+        var bottomsize = $("#bottom").height();
+        var posFace = Math.min(((currentScrollPos - bottompos) / (bottomsize - $(window).height())) * 250, 95);
+        var posWork = Math.min(((currentScrollPos - bottompos) / (bottomsize - $(window).height())) * 175, 95);
+        var posOther = Math.min(((currentScrollPos - bottompos) / (bottomsize - $(window).height())) * 95, 95);
+        $("#facebook").css("left", posFace + "%");
+        $("#work").css("left", posWork + "%");
+        $("#other").css("left", posOther + "%");
+    }
+    else {
+        $("#facebook").css("left", "0");
+        $("#work").css("left", "0");
+        $("#other").css("left", "0");
     }
 }

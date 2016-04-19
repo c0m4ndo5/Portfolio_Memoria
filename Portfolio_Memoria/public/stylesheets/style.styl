@@ -8,8 +8,8 @@ a
 	position:absolute
 	width:100%
 .pagetop
-	position:fixed
-	height:70%
+	position:relative
+	height:70vh
 	background-image:url('/images/banner0_portfolio_yuri.jpg')
 	background-repeat:no-repeat
 	background-attachment:fixed
@@ -19,8 +19,8 @@ a
 .pagescroll
 	text-align:center
 	top:70%
-	height:3000px
 	min-width:1000px
+	width:100%
 	background-color:rgb(230,230,230)
 .namediv
 	background-color:rgb(230,230,230)
@@ -49,7 +49,7 @@ a
 	text-align:left
 	vertical-align:middle
 .scrollarea
-	margin-top:300px
+	padding-top:300px
 .scrollarea > div
 	position:initial
 	display:inline-block
@@ -143,17 +143,26 @@ a
 	width:105vw
 	left:-100vw
 	height:50vh
-	top:50vh
+	top:120vh
 	transform:translateY(-50%)
+	z-index:10
 .fixedsocial
 	position:fixed
 	top:50%
 .social img
 	max-width:100%
+	max-height:100%
 .social div
-    border-radius: 6px
-    background: rgba(200,200,200,0.7)
-    background-position: left top
-    background-repeat: repeat
+	position:relative
+	margin-bottom:5px
+	padding:0
+	border-radius:6px
+	background:rgba(200,200,200,0.7)
+	background-position:left top
+	background-repeat:repeat
 .social div:hover
 	background: rgba(200,200,200,0.9)
+#bottom
+	width:100%
+	height:600vh
+	background:rgb(230,230,230)
