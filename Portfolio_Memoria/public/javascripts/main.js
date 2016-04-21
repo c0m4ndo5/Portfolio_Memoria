@@ -3,6 +3,8 @@ var bannerlist = ['/images/banner0_portfolio_yuri.jpg', '/images/banner1_portfol
 var active_slideshow = "none"
 
 $(document).ready(function () {
+    
+
     $(window).on("resize", function (e) {
         lockpos = $(window).height()*0.7;
         update_scroll();
@@ -24,20 +26,15 @@ $(document).ready(function () {
     //ON CLICK events
 
     $("#aboutme_click").on("click", function () {
-        $(".blackoverlay").fadeIn(1000);
-        $("#aboutme_slide").fadeIn(1000);
-        active_slideshow = "#aboutme_slide";
+        displayImageSlider("#aboutme_slide");
     });
     
     $("#education_click").on("click", function () {
-        $(".blackoverlay").fadeIn(1000);
-        $("#education_slide").fadeIn(1000);
-        active_slideshow = "#education_slide";
+        displayImageSlider("#education_slide");
     });
 
     $(".back").on("click", function () {
-        $(".blackoverlay").fadeOut(1000);
-        $(".slides").fadeOut(1000);
+        hideImageSlider();
     });
 
     $(".arrowright").on("click", function () {
@@ -97,4 +94,23 @@ function update_scroll(){
         $("#work").css("left", "0");
         $("#other").css("left", "0");
     }
+}
+
+function displayImageSlider(element){
+    $(".blackoverlay").fadeIn(1000);
+    $(element).fadeIn(1000);
+    active_slideshow = element;
+    var currentPos = $(window).scrollTop()
+    $(window).scroll(function () {
+        $(window).scrollTop(currentPos);
+    });
+}
+
+function hideImageSlider(){
+    $(window).unbind("scroll");
+    $(window).on("scroll", function (e) {
+        update_scroll();
+    });
+    $(".blackoverlay").fadeOut(1000);
+    $(".slides").fadeOut(1000);
 }
