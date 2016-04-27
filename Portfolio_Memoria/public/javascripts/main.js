@@ -32,6 +32,10 @@ $(document).ready(function () {
     $("#education_click").on("click", function () {
         displayImageSlider("#education_slide");
     });
+    
+    $("#work_click").on("click", function () {
+        displayImageSlider("#work_slide");
+    });
 
     $(".back").on("click", function () {
         hideImageSlider();
@@ -66,6 +70,20 @@ $(document).ready(function () {
             }
         });
         $(picslist[itemFadeIn]).fadeIn();
+    });
+
+    $(".social span").hover(function () {
+        var fadeDelay = 0;
+        $(this).animate({ zoom: 1.3 }, 400);
+        $('[parent='+this.className+']').each(function () {
+            setTimeout(function (element) {
+                $(element).fadeIn(400);
+            }, fadeDelay,this);
+            fadeDelay += 500;
+        });
+
+    }, function () {
+    
     });
 });
 
