@@ -4,7 +4,11 @@ body {
   min-width: 1000px;
 }
 a {
-  color: #00b7ff;
+  color: #fff;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 .all {
   display: block;
@@ -195,7 +199,7 @@ figure {
   max-width: 100%;
   max-height: 100%;
 }
-.social div {
+.social > div {
   position: relative;
   margin-bottom: 5px;
   padding: 0;
@@ -204,7 +208,7 @@ figure {
   background-position: left top;
   background-repeat: repeat;
 }
-.social div:hover {
+.social > div:hover {
   background: rgba(200,200,200,0.9);
 }
 #bottom {
@@ -227,4 +231,22 @@ figure {
 }
 .socialtext3 {
   left: 75%;
+}
+.socialtext4 {
+  left: 4%;
+}
+.socialtext5 {
+  left: 75%;
+}
+.social_click {
+  position: absolute;
+  height: 100%;
+  width: 5%;
+  left: 95%;
+}
+.social_click a {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
 }
