@@ -238,6 +238,12 @@ figure {
 .socialtext5 {
   left: 75%;
 }
+.socialtext6 {
+  left: 5%;
+}
+.socialtext7 {
+  left: 75%;
+}
 .social_click {
   position: absolute;
   height: 100%;
@@ -249,4 +255,15 @@ figure {
   height: 100%;
   width: 100%;
   left: 0;
+}
+#backtop {
+  display: none;
+  position: fixed;
+  color: #fff;
+  background: #808080;
+  top: 97.5%;
+  height: 2.5%;
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
 }

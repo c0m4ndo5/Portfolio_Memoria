@@ -92,9 +92,11 @@ function update_scroll(){
     if (currentScrollPos > lockpos) {
         $(".namediv").addClass("fixedname");
         $(".social").addClass("fixedsocial");
+        $("#backtop").fadeIn();
     } else {
         $(".namediv").removeClass("fixedname");
         $(".social").removeClass("fixedsocial");
+        $("#backtop").fadeOut();
     }
     
     var bottompos = $("#bottom").offset().top;

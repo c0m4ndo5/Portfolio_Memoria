@@ -41,6 +41,7 @@
     <Content Include="public\images\banner0_portfolio_yuri.jpg" />
     <Content Include="public\images\banner1_portfolio_yuri.jpg" />
     <Content Include="public\images\banner2_portfolio_yuri.jpg" />
+    <Content Include="public\images\bao.png" />
     <Content Include="public\images\bellator-1.png" />
     <Content Include="public\images\campus_UTFPR.jpg" />
     <Content Include="public\images\close.png" />
