@@ -1,8 +1,61 @@
 ﻿var lockpos = $(window).height() * 0.7;
-var bannerlist = ['/images/banner0_portfolio_yuri.jpg', '/images/banner1_portfolio_yuri.jpg', '/images/banner2_portfolio_yuri.jpg']
-var active_slideshow = "none"
+var bannerlist = ['/images/banner0_portfolio_yuri.jpg', '/images/banner1_portfolio_yuri.jpg', '/images/banner2_portfolio_yuri.jpg'];
+var active_slideshow = "none";
+var loadtext1 = "SEARCHING FOR CODENAME 'c0m4ndo45'";
+var loadtext2 = "LOCATED PERSONAL FILE 'YURI ANTIN WERGRZN'";
+var loadtext3 = "DOWNLOADING...";
 
 $(document).ready(function () {
+    //IMAGE PRELOADING
+    $(bannerlist).each(function () {
+        $('<img/>')[0].src = this;
+    });
+    //Main bg loop function
+    var pagetop_loop = function () {
+        var bannerindex = 0;
+        var intervalTime = 9000;
+        setInterval(function () {
+            $(".pagetop").animate({ opacity: 0 }, 200, function () {
+                $(".pagetop").css('background-image', "url('/images/banner" + bannerindex + "_portfolio_yuri.jpg')");
+                $(".pagetop").animate({ opacity: 1 }, 200);
+            });
+            bannerindex++;
+            bannerindex = bannerindex % bannerlist.length;
+        }, intervalTime);
+    };
+
+    //LOADING
+    $("body").css('overflow', 'hidden');
+    var interval1 = setInterval(function () {
+        var curtext = $("#loadingtext1").html();
+        $("#loadingtext1").html(loadtext1.substring(0, curtext.length+1));
+        if(curtext.length+1 == loadtext1.length) {
+            clearInterval(interval1);
+            setTimeout(function () {
+                var interval2 = setInterval(function () {
+                    var curtext = $("#loadingtext2").html();
+                    $("#loadingtext2").html(loadtext2.substring(0, curtext.length + 1));
+                    if (curtext.length + 1 == loadtext2.length) {
+                        clearInterval(interval2);
+                        setTimeout(function () {
+                            var interval3 = setInterval(function () {
+                                var curtext = $("#loadingtext3").html();
+                                $("#loadingtext3").html(loadtext3.substring(0, curtext.length + 1));
+                                if (curtext.length + 1 == loadtext3.length) {
+                                    clearInterval(interval3);
+                                    setTimeout(function () {
+                                        $(".loading").fadeOut();
+                                        $("body").css('overflow', 'initial');
+                                        pagetop_loop();
+                                    },1200);
+                                }
+                            }, 50);
+                        }, 800);
+                    }
+                }, 50);
+            }, 1200);
+        }
+    }, 50);
     
 
     $(window).on("resize", function (e) {
@@ -13,15 +66,6 @@ $(document).ready(function () {
     $(window).on("scroll", function (e) {
         update_scroll();
     });
-    var bannerindex = 0;
-    setInterval(function () {
-        $(".pagetop").animate({ opacity: 0 }, 200, function () {
-            $(".pagetop").css('background-image', "url('/images/banner" + bannerindex + "_portfolio_yuri.jpg')");
-            $(".pagetop").animate({ opacity: 1 }, 200);
-        });
-        bannerindex++;
-        bannerindex = bannerindex % bannerlist.length;
-    }, 7000);
 
     //ON CLICK events 
 
