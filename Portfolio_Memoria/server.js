@@ -1,6 +1,6 @@
 ﻿#!/usr/bin/env node
 var debug = require('debug')('Portfolio_Memoria');
-var app = require('../app');
+var app = require('./app');
 
 if(typeof process.env.OPENSHIFT_NODEJS_PORT === 'undefined'){
 	app.set('port', process.env.PORT || 3000); 
