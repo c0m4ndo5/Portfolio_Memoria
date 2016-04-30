@@ -12,7 +12,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>11b875af-79f9-4a83-9d14-99cbe4a4df58</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>bin\www</StartupFile>
+    <StartupFile>nodestart\www</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -34,7 +34,7 @@
     <Compile Include="public\javascripts\main.js" />
     <Compile Include="routes\index.js" />
     <Compile Include="routes\users.js" />
-    <Compile Include="bin\www" />
+    <Compile Include="nodestart\www" />
     <Content Include="package.json" />
     <Content Include="public\images\arrowleft.png" />
     <Content Include="public\images\arrowright.png" />
@@ -67,7 +67,7 @@
     <Content Include="views\error.jade" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="bin\" />
+    <Folder Include="nodestart\" />
     <Folder Include="public\" />
     <Folder Include="public\images\" />
     <Folder Include="public\javascripts\" />
