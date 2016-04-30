@@ -23,7 +23,7 @@ $(document).ready(function () {
         bannerindex = bannerindex % bannerlist.length;
     }, 7000);
 
-    //ON CLICK events
+    //ON CLICK events 
 
     $("#aboutme_click").on("click", function () {
         displayImageSlider("#aboutme_slide");
