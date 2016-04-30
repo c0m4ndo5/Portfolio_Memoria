@@ -15,6 +15,9 @@ a:hover {
   position: absolute;
   width: 100%;
 }
+.standardbck {
+  background-color: #fff;
+}
 .pagetop {
   position: relative;
   height: 70vh;
@@ -30,10 +33,8 @@ a:hover {
   top: 70%;
   min-width: 1000px;
   width: 100%;
-  background-color: #e6e6e6;
 }
 .namediv {
-  background-color: #e6e6e6;
   z-index: 2;
 }
 .fixedname {
@@ -204,17 +205,17 @@ figure {
   margin-bottom: 5px;
   padding: 0;
   border-radius: 6px;
-  background: rgba(200,200,200,0.7);
+  background: #f3f3f3;
   background-position: left top;
   background-repeat: repeat;
 }
 .social > div:hover {
-  background: rgba(200,200,200,0.9);
+  background: #dcdcdc;
 }
 #bottom {
   width: 100%;
-  height: 600vh;
-  background: #e6e6e6;
+  height: 400vh;
+  max-height: 2400px;
 }
 .social span {
   color: #fff;
