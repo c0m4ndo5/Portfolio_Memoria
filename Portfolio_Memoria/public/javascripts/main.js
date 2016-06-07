@@ -136,10 +136,12 @@ function update_scroll(){
     if (currentScrollPos > lockpos) {
         $(".namediv").addClass("fixedname");
         $(".social").addClass("fixedsocial");
+        $(".social").fadeIn();
         $("#backtop").fadeIn();
     } else {
         $(".namediv").removeClass("fixedname");
         $(".social").removeClass("fixedsocial");
+        $(".social").fadeOut(0);
         $("#backtop").fadeOut();
     }
     
