@@ -41,7 +41,7 @@ a:hover {
 }
 .pagetop {
   position: relative;
-  height: 70vh;
+  height: 75vh;
   background-image: url("/images/banner0_portfolio_yuri.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -102,10 +102,30 @@ a:hover {
   text-align: left;
   vertical-align: middle;
 }
+@media only screen and (max-device-width:380px) {
+  .rightscroll {
+    margin-left: 15%;
+  }
+}
 @media only screen and (max-width:1000px) {
   .rightscroll {
     font: 40px 'PT Sans Narrow';
     width: 70%;
+  }
+}
+.divisorscroll {
+  display: none;
+  position: relative;
+  margin-top: 50px;
+  height: 20vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center 0;
+  width: 100%;
+}
+@media only screen and (max-width:1000px) {
+  .divisorscroll {
+    display: block;
   }
 }
 .scrollarea {
@@ -262,7 +282,7 @@ figure {
   margin-bottom: 5px;
   padding: 0;
   border-radius: 6px;
-  background: #f3f3f3;
+  background: rgba(235,235,235,0.6);
   background-position: left top;
   background-repeat: repeat;
 }
@@ -272,7 +292,7 @@ figure {
   }
 }
 .social > div:hover {
-  background: #dcdcdc;
+  background: rgba(210,210,210,0.6);
 }
 #bottom {
   width: 100%;
