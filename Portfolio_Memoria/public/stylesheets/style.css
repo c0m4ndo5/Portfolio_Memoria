@@ -49,6 +49,11 @@ a:hover {
   background-size: cover;
   min-width: 1000px;
 }
+@media only screen and (max-width:1000px) {
+  .pagetop {
+    background-attachment: scroll;
+  }
+}
 .pagescroll {
   text-align: center;
   top: 70%;
@@ -235,6 +240,7 @@ figure {
   .social {
     width: calc(870px + 190vh - 90vw);
     display: none;
+    left: calc((870px + 190vh - 90vw) * -0.95);
   }
 }
 .fixedsocial {
@@ -280,6 +286,11 @@ figure {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+@media only screen and (max-width:1000px) {
+  .social span {
+    font-size: 50px;
+  }
+}
 .socialtext1 {
   left: 5%;
 }
@@ -323,4 +334,9 @@ figure {
   text-align: center;
   width: 100%;
   font-size: 20px;
+}
+@media only screen and (max-width:1000px) {
+  #backtop {
+    left: -100%;
+  }
 }
