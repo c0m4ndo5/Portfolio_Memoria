@@ -118,9 +118,9 @@ a:hover {
   position: relative;
   margin-top: 50px;
   height: 20vh;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
-  background-position: center 0;
+  background-position: center center;
   width: 100%;
 }
 @media only screen and (max-width:1000px) {

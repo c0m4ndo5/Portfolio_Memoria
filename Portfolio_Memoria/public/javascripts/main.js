@@ -160,6 +160,7 @@ function update_scroll(){
         $("#work").css("left", "0");
         $("#other").css("left", "0");
     }
+    $('.divisorscroll').css('background-position', 'center ' + currentScrollPos*100/bottompos + '%');
 }
 
 function displayImageSlider(element){
